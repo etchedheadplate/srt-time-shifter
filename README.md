@@ -22,7 +22,7 @@ Tool for shifting subtitles with incorrect timing using correct subtitles (for e
 
 1. First correct subtitle text should correspond to first incorrect subtitle text (i.e. if first correct line is "THE MATRIX", then first incorrect line should be the same, not "Is everything in place?")
 
-2. Amount of lines in correct subtitles should be roughly the same as in incorrect subtitles, preferably exactly the same (i.e. if **correct.srt** has 1000 lines **incorrect.srt** should have 1000 lines)
+2. Amount of lines in correct subtitles should be roughly the same as in incorrect subtitles, preferably exactly the same (i.e. if **correct.srt** has 1000 lines **incorrect.srt** should have 1000 lines, not 500 or 1500)
 
 3. By default program assumes encoding is utf-8. If your subtitles differs and you know the encoding, you can manualy change it in **srtparser.py** for correct and incorrect subtitles and in **srttimeshifter.py** for corrected subtitles. If encoding is unknown my guess is as good as yours.
 
