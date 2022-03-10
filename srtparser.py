@@ -1,14 +1,9 @@
 from __future__ import print_function
 
 '''
-Корректные субтитры парсятся в списоковые блоки в
-формате [№, время, текст] для каждого субтитра.
-
-Каждый блок проходит 3 синтаксические проверки: перевод
-строки \n, номер субтитра, наличие символов '-->' и ':'.
-
-В итоге каждый блок вносятся в общий список субтиров
-в формате [субтитр1, субтитр2, ...].
+Correct subtitles are parsed in list blocks [№, time, text] for each subtitle. All
+blocks are syntax-checked and must contain: newline '\n', number and '-->'characters.
+Finally each block is pushed in list [subtitle1, subtitle2, ...].
 '''
 
 corSrtIn = open('correct.srt', 'r', encoding='utf-8-sig')
@@ -35,7 +30,7 @@ for corLine in range(len(corSrt)):
 corSrtIn.close()
 
 '''
-То же самое для некорректных субтитров.
+Same process for incorrect subtitles
 '''
 
 incorSrtIn = open('incorrect.srt', 'r', encoding='utf-8-sig')
