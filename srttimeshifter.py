@@ -3,9 +3,8 @@ from srtparser import corSrtParsed, incorSrtParsed
 from datetime import timedelta
 
 '''
-Функция разбивает начальное время субтитра на состовляющие, которые могут
-применятся функцией timedelta как аргументы. На выходе возвращается время
-в формате timedelta, с которым можно проводить арифметические действия.
+Function splits subtitle's start time to integers which can be used by timedelta function
+as arguments, so arithmetic actions can be performed.
 '''
 
 def startTimeSplit(list, sublist, formatedItem):
@@ -18,7 +17,7 @@ def startTimeSplit(list, sublist, formatedItem):
     return sTime
 
 '''
-То же самое для конечного времени субтитра.
+Same process for subtitle's end time.
 '''
 
 def endTimeSlit(list, sublist, formatedItem):
@@ -31,21 +30,18 @@ def endTimeSlit(list, sublist, formatedItem):
     return eTime
 
 '''
-Вычисляется временной сдвиг между корректными и некорректными субтитрами
-в формате timedelta.
+Time difference between correct and incorrect subtitles is calculated in timedelta
+function format.
 '''
 
 differenceTime = timedelta
 differenceTime = startTimeSplit(corSrtParsed, 0, 1) - startTimeSplit(incorSrtParsed, 0, 1)
 
 '''
-Время некорректных субтитров переводятся в формат timedelta и к ним
-прибавляется временной сдвиг. Полученное корректное время форматируется
-по стандарту .srt и возвращается в список некорректных субтитров.
-
-Перед каждым номером субтитра добавляется '\n' для отображения перевода
-строки в финальном файле. После окончания цикла корректировки времени
-убирается лишний перевод строки '\n' в первой строке.
+Incorrect subtitles time is formatted for timedelta function and difference time is added.
+Obtained correct time is formatted for .srt standart and returns in incorrect subtitles list.
+Newline '\n' is added before each subtile number according to .srt standart. After cycle is
+finished, redundant '\n' before first string is omitted.
 '''
 
 unformatedLine = 0
@@ -62,9 +58,8 @@ for unformatedLine in range(len(incorSrtParsed)):
 incorSrtParsed[0][0] = incorSrtParsed[0][0].lstrip('\n')
 
 '''
-Каждый блок в списке со скорректированным временем и форматированием
-печатается в файл построчно. Во время печати убираются лишние переводы
-строки '\n'.
+Each item in list of corrected time and format is printed in final .srt file. Redundant '\n'
+are omitted.
 '''
 
 formatedSrtOut = open('corrected.srt', 'w', encoding='utf-8-sig')
