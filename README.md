@@ -28,6 +28,6 @@ Tool for shifting subtitles with incorrect timing using correct subtitles (for e
 
 ## Disclosure:
 
-While code refactoring and feature extension (i.g. manual time shifting, additional subtitle formats, etc) are in plans, this project is a study exercise. It doesn't pursue goal of exceeding usability of existing services and most defenitly doesn't guarantee you 100% efficiency. If you need a reliable tool I suggest using existing services like [subtitletools.com/](https://subtitletools.com/) and others.
+While code refactoring and feature extension (i.g. manual time shifting, additional subtitle formats, etc) are in plans, this project is a study exercise. It doesn't pursue goal of exceeding usability of existing services and most defenitly doesn't guarantee you 100% efficiency. If you need a reliable tool I suggest using existing services like [subtitletools.com](https://subtitletools.com/) and others.
 
 However, any feedback is most welcome.
