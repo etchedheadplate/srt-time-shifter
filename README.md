@@ -6,17 +6,19 @@ Tool for shifting subtitles with incorrect timing using correct subtitles (for e
 
 ## Usage:
 
-1. Change name of .srt file with correct time to **correct.srt**
+Put your .srt files in script directory and run shell script:
+```shell
+chmod 766 runme.sh
+./runme.sh
+```
+Or manually run python script with file names as arguments:
+```shell
+python3 srttimeshifter.py <incorrect_subtitles_name.srt> <correct_subtitles_name.srt>
+```
+File with corrected time will appear in directory
 
-2. Change name of .srt file with incorrect time to **incorrect.srt**
-
-3. Place both .srt files in program directory with **srtparser.py** and **srttimeshifter.py**
-
-4. Run **srttimeshifter.py**
-
-5. File with corrected time named **corrected.srt** will appear in program directory
-
-  
+## Example:
+![demo](https://github.com/etchedheadplate/srt-time-shifter/blob/main/demo.gif)
 
 ## Known issues:
 
